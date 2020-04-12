@@ -5,5 +5,6 @@ class Song
     @artist = artist
     @genre = genre
   end
+  @@count = 0
 
 end
