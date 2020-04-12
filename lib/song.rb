@@ -30,8 +30,14 @@ class Song
     @@genres.inject(Hash.new(0)) do |hash, e|
     hash[e] += 1
     hash
+    end
   end
 
+  def self.artist_count
+    @@artists.inject(Hash.new(0)) do |hash, e|
+      hash|e| += 1
+      hash
+    end
   end
 
 end
