@@ -26,7 +26,7 @@ class Song
     @@genres.uniq
   end
 
-  def self.genres_count
+  def genres_count
     @@genres[*data.group_by{ |v| v }.flat_map{ |k, v| [k, v.size] }]
   end
 
