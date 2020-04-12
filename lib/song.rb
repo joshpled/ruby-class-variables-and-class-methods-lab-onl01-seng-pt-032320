@@ -14,6 +14,10 @@ class Song
     @@genres << @genre
   end
 
+  def count
+    count = @@count
+    count
+  end
 
 
 end
