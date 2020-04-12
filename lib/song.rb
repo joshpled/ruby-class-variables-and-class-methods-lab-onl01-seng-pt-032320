@@ -26,8 +26,12 @@ class Song
     @@genres.uniq
   end
 
-  def genres_count
-    @@genres[*data.group_by{ |v| v }.flat_map{ |k, v| [k, v.size] }]
+  def self.genres_count
+    @@genres.inject(Hash.new(0)) do |hash, e|
+    hash[e] += 1
+    hash
+  end
+    
   end
 
 end
